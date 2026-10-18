@@ -31,7 +31,6 @@ A modern college merchandise storefront inspired by college event culture and ca
    - ADMIN_SECRET
    - VITE_ADMIN_PASSWORD
    - VITE_WHATSAPP_NUMBER
-   - VITE_API_BASE_URL=/api
 
 ## Supabase schema
 
