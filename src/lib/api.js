@@ -42,8 +42,7 @@ export async function getCategories() {
   }
 }
 
-export async function saveProduct(product, adminKey = '') {
-  const isUpdate = Boolean(product.id)
+export async function saveProduct(product, adminKey = '', isUpdate = Boolean(product.id)) {
   const response = await fetch(`${API_BASE}/products`, {
     method: isUpdate ? 'PUT' : 'POST',
     headers: {

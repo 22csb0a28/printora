@@ -226,6 +226,7 @@ function App() {
     }
 
     const adminKey = localStorage.getItem('printora-admin-key') || adminPassword
+    const isUpdate = Boolean(form.id)
     const payload = {
       ...form,
       id: form.id || form.code,
@@ -239,8 +240,8 @@ function App() {
     }
 
     try {
-      await saveProduct(payload, adminKey)
-      setSuccess(payload.id ? 'Product updated successfully.' : 'Product added successfully.')
+      await saveProduct(payload, adminKey, isUpdate)
+      setSuccess(isUpdate ? 'Product updated successfully.' : 'Product added successfully.')
       setError('')
       resetForm()
       await loadProducts()
