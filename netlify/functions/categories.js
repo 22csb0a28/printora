@@ -34,7 +34,7 @@ const getSupabaseClient = () => {
 }
 
 const isAuthorized = (event) => {
-  const secret = process.env.ADMIN_SECRET || 'campus-admin-2026'
+  const secret = process.env.ADMIN_SECRET || 'campusadmin'
   const headerValue =
     event.headers?.['x-admin-key'] ||
     event.headers?.['X-Admin-Key'] ||
